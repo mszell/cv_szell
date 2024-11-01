@@ -1,0 +1,720 @@
+% Jason R. Blevins - Curriculum Vitae
+%
+% Copyright (C) 2004-2011 Jason R. Blevins
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely.  No attribution is
+% required in any resulting documents.  I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[10pt,a4paper]{article}
+
+
+\usepackage{scalerel}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+%\definecolor{orcidlogocol}{HTML}{A6CE39}
+\definecolor{orcidlogocol}{HTML}{000000}
+\tikzset{
+  orcidlogo/.pic={
+    \fill[orcidlogocol] svg{M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z};
+    \fill[white] svg{M86.3,186.2H70.9V79.1h15.4v48.4V186.2z}
+                 svg{M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z}
+                 svg{M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z};
+  }
+}
+
+\tikzset{
+  mastodonlogo/.pic={
+    \fill[orcidlogocol] svg{M60.7539 14.3904C59.8143 7.40642 53.7273 1.90257 46.5117 0.836066C45.2943 0.655854 40.6819 0 29.9973 0H29.9175C19.2299 0 16.937 0.655854 15.7196 0.836066C8.70488 1.87302 2.29885 6.81852 0.744617 13.8852C-0.00294988 17.3654 -0.0827298 21.2237 0.0561464 24.7629C0.254119 29.8384 0.292531 34.905 0.753482 39.9598C1.07215 43.3175 1.62806 46.6484 2.41704 49.9276C3.89445 55.9839 9.87499 61.0239 15.7344 63.0801C22.0077 65.2244 28.7542 65.5804 35.2184 64.1082C35.9295 63.9428 36.6318 63.7508 37.3252 63.5321C38.8971 63.0329 40.738 62.4745 42.0913 61.4937C42.1099 61.4799 42.1251 61.4621 42.1358 61.4417C42.1466 61.4212 42.1526 61.3986 42.1534 61.3755V56.4773C42.153 56.4557 42.1479 56.4345 42.1383 56.4151C42.1287 56.3958 42.1149 56.3788 42.0979 56.3655C42.0809 56.3522 42.0611 56.3429 42.04 56.3382C42.019 56.3335 41.9971 56.3336 41.9761 56.3384C37.8345 57.3276 33.5905 57.8234 29.3324 57.8156C22.0045 57.8156 20.0336 54.3384 19.4693 52.8908C19.0156 51.6397 18.7275 50.3346 18.6124 49.0088C18.6112 48.9866 18.6153 48.9643 18.6243 48.9439C18.6333 48.9236 18.647 48.9056 18.6643 48.8915C18.6816 48.8774 18.7019 48.8675 18.7237 48.8628C18.7455 48.858 18.7681 48.8585 18.7897 48.8641C22.8622 49.8465 27.037 50.3423 31.2265 50.3412C32.234 50.3412 33.2387 50.3412 34.2463 50.3146C38.4598 50.1964 42.9009 49.9808 47.0465 49.1713C47.1499 49.1506 47.2534 49.1329 47.342 49.1063C53.881 47.8507 60.1038 43.9097 60.7362 33.9301C60.7598 33.5372 60.8189 29.8148 60.8189 29.4071C60.8218 28.0215 61.2651 19.5781 60.7539 14.3904Z};
+    \fill[white] svg{M50.3943 22.237V39.5876H43.5185V22.7481C43.5185 19.2029 42.0411 17.3949 39.036 17.3949C35.7325 17.3949 34.0778 19.5338 34.0778 23.7585V32.9759H27.2434V23.7585C27.2434 19.5338 25.5857 17.3949 22.2822 17.3949C19.2949 17.3949 17.8027 19.2029 17.8027 22.7481V39.5876H10.9298V22.237C10.9298 18.6918 11.835 15.8754 13.6453 13.7877C15.5128 11.7049 17.9623 10.6355 21.0028 10.6355C24.522 10.6355 27.1813 11.9885 28.9542 14.6917L30.665 17.5633L32.3788 14.6917C34.1517 11.9885 36.811 10.6355 40.3243 10.6355C43.3619 10.6355 45.8114 11.7049 47.6847 13.7877C49.4931 15.8734 50.3963 18.6899 50.3943 22.237Z};
+  }
+}
+
+\tikzset{
+  googlescholarlogo/.pic={
+    \fill[orcidlogocol] 
+svg{M896.76 1130.189c-27.618 30.838-59.618 46.19-95.802 46.19-40.952 0-72.382-14.738-94.288-44.15-21.906-29.322-32.864-64.848-32.864-106.584 0-35.548 5.998-71.738 18-108.64 11.958-36.886 31.524-69.814 58.954-98.838 27.334-29.096 59.144-43.616 95.284-43.616 40.288 0 71.76 13.502 94.332 40.492 22.476 26.954 33.756 60.98 33.756 101.962 0 34.904-5.954 71.454-17.906 109.664-11.894 38.262-31.752 72.784-59.466 103.52zM1658.858 1512.573c-64.358 64.424-141.86 96.57-232.572 96.57h-1097.142c-90.712 0-168.14-32.146-232.572-96.57-64.424-64.286-96.57-141.86-96.57-232.572v-1097.142c0-90.712 32.146-168.288 96.57-232.712 64.432-64.146 142-96.432 232.572-96.432h1097.142c90.712 0 168.214 32.286 232.572 96.57 64.432 64.432 96.644 141.86 96.644 232.572v1097.142c0 90.712-32.22 168.288-96.644 232.572zM1297.81 1154.159v-392.126c0-18.154-14.856-33.016-33.016-33.016h-12.156c-18.162 0-33.016 14.856-33.016 33.016v392.126c0 16.12-2.34 29.578 20.188 32.41v52.172l-173.43-142.24c2.004-3.716 3.906-6.092 5.712-9.208 15.242-26.976 23.004-60.526 23.004-101.53 0-31.43-5.238-59.662-15.858-84.598-10.57-24.928-23.428-45.29-38.43-60.972-15.002-15.74-30.048-30.128-45.092-43.074-15.046-12.976-27.904-26.506-38.436-40.55-10.614-14-15.894-28.474-15.894-43.476 0-15.024 6.854-30.288 20.524-45.67 13.62-15.426 30.376-30.376 50.19-45.144 19.85-14.666 39.658-30.946 59.472-48.662 19.858-17.694 36.52-40.456 50.14-68.096 13.722-27.744 20.568-58.288 20.568-91.86 0-44.288-11.294-84.282-33.806-119.882-22.58-35.446-51.998-63.73-88.144-84.472-36.242-20.882-75-36.6-116.334-47.214-41.42-10.518-82.52-15.806-123.568-15.806-25.908 0-52.048 1.996-78.336 6.1-26.382 4.096-52.81 11.33-79.426 21.526-26.668 10.262-50.286 22.864-70.758 37.998-20.524 14.98-37.046 34.312-49.716 57.856-12.668 23.552-18.958 50.022-18.958 79.426 0 34.882 9.714 67.24 29.192 97.404 19.478 29.944 45.282 54.952 77.378 74.76 55.998 34.838 143.858 56.364 263.432 64.498-27.334 34.172-41.048 66.334-41.048 96.432 0 17.122 4.476 35.474 13.334 55.288-14.284-1.996-28.994-3.124-44.002-3.124-64.234 0-118.476 20.882-162.524 62.932-44.046 41.976-66.048 94.522-66.048 158.048 0 6.642 0.19 12.492 0.672 18.974h-261.046l393.618 342.17h651.856l-60.24-47.024v-82.996c22.368-2.874 20.004-16.318 20.004-32.394zM900.382 544.929c-7.52 1.36-18.088 2.122-31.708 2.122-29.382 0-58.288-2.596-86.666-7.782-28.38-5.046-56.378-13.568-83.998-25.592-27.722-11.952-50.096-29.528-67.146-52.766-17.144-23.208-25.666-50.542-25.666-81.994 0-29.974 7.52-56.714 22.572-80.004 15.002-23.142 34.808-41.26 59.428-54.236 24.62-12.998 50.432-22.814 77.378-29.264 26.998-6.408 54.476-9.736 82.476-9.736 55.376 0 103.050 12.47 143.046 37.406 39.906 24.928 59.904 63.422 59.904 115.382 0 10.928-1.522 21.686-4.528 32.19-3.138 10.62-6.24 19.712-9.282 27.26-3.050 7.41-8.858 16.332-17.43 26.616-8.522 10.314-15.046 17.934-19.434 23.004-4.476 5.238-12.852 12.712-25.19 22.594-12.236 9.926-20.048 16.114-23.522 18.402-3.43 2.406-12.332 8.908-26.668 19.456-14.328 10.634-22.184 16.274-23.566 16.94z};
+  }
+}
+
+
+\newcommand\orcidicon[1]{\href{https://orcid.org/#1}{\mbox{\scalerel*{
+\begin{tikzpicture}[yscale=-1,transform shape]
+\pic{orcidlogo};
+\end{tikzpicture}
+}{|}}}}
+
+\newcommand\mastodonicon[1]{\href{#1}{\mbox{\scalerel*{
+\begin{tikzpicture}[yscale=-1,transform shape]
+\pic{mastodonlogo};
+\end{tikzpicture}
+}{|}}}}
+
+
+\newcommand\googlescholaricon[1]{\href{https://orcid.org/#1}{\mbox{\scalerel*{
+\begin{tikzpicture}
+\pic{googlescholarlogo};
+\end{tikzpicture}
+}{|}}}}
+
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Fonts
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+\usepackage{fontawesome}
+\widowpenalty = 10000 \clubpenalty = 10000 \raggedbottom
+
+% Set your name here
+\def\name{Michael Szell}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdftitle = {\name: CV Michael Szell},
+  pdfsubject = {CV Michael Szell},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.7in, 9.3in},
+  left=0.8in,
+  top=1.0in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+    \setlength{\itemsep}{0.25em}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0.25em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+%{\huge \name \\[8pt] {\large Research fellow}}
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{12pt}
+  {\large Associate Professor}\\[10pt]
+  NEtwoRks, Data, and Society (NERDS)\\
+  Computer Science Department\\
+  IT University of Copenhagen\\
+  Rued Langgaards Vej 7 \\
+  2300 København, Denmark\\[4pt]
+
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{35pt}
+%  \faPhone \,\,\, +45 XXXX XXXX\\
+  \href{mailto:misz@itu.dk}{\faEnvelope \, misz@itu.dk} \quad \quad \quad\quad\,\! \href{http://michael.szell.net}{\faLink \, michael.szell.net}\\
+  \orcidicon{0000-0003-3022-2483} \href{https://orcid.org/0000-0003-3022-2483}{0000-0003-3022-2483} \quad \!\googlescholaricon{3kwJhIcAAAAJ} \href{https://scholar.google.com/citations?user=3kwJhIcAAAAJ}{3kwJhIcAAAAJ}\\
+  \mastodonicon{https://datasci.social/@mszll} \href{https://datasci.social/@mszll}{mszll@datasci.social} \quad \href{https://github.com/mszell}{\faGithub \, mszell}\\
+    \phantom{empty line}\\
+    \faMapMarker \,\,\,\! Kaj Munks Vej 9, Room 3F11, Desk 3F11-04
+\end{minipage}
+
+
+\section*{Positions held}
+
+\begin{itemize}
+\item Associate professor, Computer Science Department, IT University of Copenhagen, since Oct 2020
+\item Affiliate, Pioneer Centre for Artificial Intelligence, since Feb 2023
+\item External faculty, Complexity Science Hub Vienna, since Apr 2017
+\item Founder and manager of Bayer \& Szell OG, since Sep 2006
+\end{itemize}
+\subsection*{Past positions}
+\begin{itemize}
+\item Assistant professor, Computer Science Department, IT University of Copenhagen\\Feb 2019 -- Sep 2020
+\item External researcher, ISI Foundation\\Aug 2019 -- Jul 2020, Nov 2021 -- Oct 2024
+\item Assistant professor, Department of Network and Data Science, Central European University\\Oct 2017 -- Jan 2019
+\item Researcher, Centre for Economic and Regional Studies, Hungarian Academy of Sciences\\Sep 2017 -- Jan 2019
+\item Adjunct visiting professor, Center for Complex Network Research, Northeastern University\\Sep 2016 -- Jan 2019
+\item Research fellow, Centre for Social Sciences, Hungarian Academy of Sciences\\Sep 2016 -- Sep 2017
+\item Researcher in residence, moovel lab, moovel Group GmbH\\Sep 2016 -- Dec 2016
+\item Postdoctoral research associate, Center for Complex Network Research, Northeastern University\\Jul 2014 -- Sep 2016
+\item Postdoctoral research fellow, Senseable City Laboratory, Massachusetts Institute of Technology\\Apr 2012 -- Jul 2014
+\item Research assistant, Section for Science of Complex Systems, Medical University of Vienna\\Jan 2009 -- Dec 2011
+\end{itemize}
+
+\section*{Research interests}
+\begin{itemize}
+\item Primary: Urban/Geospatial data science, Human mobility, Sustainable transport
+\item Secondary: Network science, Complex systems, Social networks, Data visualization
+\end{itemize}
+
+
+%% END FIRST PAGE
+
+\section*{Education}
+
+\begin{itemize}
+  \item Ph.D.~in Physics, summa cum laude, University of Vienna, Mar 2012
+  \item M.Sc.~in Technical Mathematics, Vienna University of Technology, Oct 2007
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+\item{Programming: Python, MATLAB, PHP, SQL, HTML/CSS}
+\item{Data mining, Databases, Web scraping, Online game development}
+\item{Languages: \emph{Native} -- German, Hungarian, \emph{Proficient} -- English, \emph{Intermediate} -- Italian, Danish}
+\end{itemize}
+
+
+\section*{Publications}
+
+\subsection*{Preprints}
+\begin{itemize}
+\setlength\itemsep{1em}
+\item A. Lonardi, M. Szell, C. De Bacco\\
+    \textbf{Cohesive urban bicycle infrastructure design through optimal transport routing in multilayer networks}, \textit{arXiv:2405.02052}, (2024)
+\item H. Wolf, A.R. Vierø, M. Szell\\
+    \textbf{CoolWalks: Assessing the potential of shaded routing for active mobility in urban street networks}, \textit{arXiv:2405.01225}, (2024)
+
+\item L.M. Aiello, A. Vybornova, S. Juhász, M. Szell, E. Bokányi\\
+    \textbf{Urban highways are barriers to social ties}, \textit{arXiv:2404.11596}, (2024)
+\item M. Coscia, C. Borgelt, M. Szell\\
+    \textbf{Fast Multiplex Graph Association Rules for Link Prediction}, \textit{arXiv:2211.12094} (2022)
+\end{itemize}
+
+
+\subsection*{Peer-reviewed publications}
+\begin{itemize}
+\setlength\itemsep{1em}
+\item C.M. Büth, A. Vybornova, M. Szell\\
+    \textbf{superblockify: A Python Package for Automated Generation, Visualization, and Analysis of Potential Superblocks in Cities}, \textit{Journal of Open Source Software} 9(100), 6798 (2024)
+\item A. Rahbek Vierø, A. Vybornova, M. Szell\\
+    \textbf{How Good Is Open Bicycle Network Data? A Countrywide Case Study of Denmark}, \textit{Geographical Analysis} (2024, in print)
+\item D. Rhoads, C. Rames, A. Solé-Ribalta, M.C. González, M. Szell, J. Borge-Holthoefer\\
+    \textbf{Sidewalk networks: Review and outlook}, \textit{Computers, Environment and Urban Systems} 106, 102031 (2023)
+\item A. Rahbek Vierø, A. Vybornova, M. Szell\\
+    \textbf{BikeDNA: A Tool for Bicycle Infrastructure Data \& Network Assessment}, \textit{Environment and Planning B} 51(2), 512--528 (2024)
+\item A. Battiston, L. Napoli, P. Bajardi, A. Panisson, A. Perotti, M. Szell, R. Schifanella\\
+    \textbf{Revealing the determinants of gender inequality in urban cycling with large-scale data}, \textit{EPJ Data Science} 12, 9 (2023)
+\item S.M. Breum, B. Kostic, M. Szell\\
+    \textbf{Computational Desire Line Analysis of Cyclists on the Dybbølsbro Intersection in Copenhagen}, \textit{Transport Findings} 56683 (2022)
+\item P. Folco, L. Gauvin, M. Tizzoni, M. Szell\\
+    \textbf{Data-driven bicycle network planning for demand and safety}, \textit{Environment and Planning B} 50(8), 2087--2102 (2023)
+\item L. Alessandretti, L.G. Natera Oroczo, M. Saberi, M. Szell, F. Battiston\\
+    \textbf{Multimodal urban mobility and multilayer transport networks}, \textit{Environment and Planning B} 50(8), 2038--2070 (2023)
+\item M. Klanjčić, L. Gauvin, M. Tizzoni, M. Szell\\
+    \textbf{Identifying urban features for vulnerable road user safety in Europe}, \textit{EPJ Data Science} 11, 27 (2022)
+\item M. Szell, S. Mimar, T. Perlman, G. Ghoshal, R. Sinatra\\
+    \textbf{Growing urban bicycle networks}, \textit{Scientific Reports} 12, 6765 (2022)
+\item A. Vybornova, T. Cunha, A. Gühnemann, M. Szell\\
+    \textbf{Automated Detection of Missing Links in Bicycle Networks}, \textit{Geographical Analysis} 55(2), 239--267 (2023)
+\item M. Coscia, M. Szell\\
+    \textbf{Multiplex Graph Association Rules for Link Prediction}, \textit{Proceedings of the International Conference on Web and Social Media (ICWSM)} 15(1), 129--139 (2021)
+\item M. Schläpfer, L. Dong, K. O'Keeffe, P. Santi, M. Szell, H. Salat, S. Anklesaria, M. Vazifeh, C. Ratti, G.B. West\\
+    \textbf{The universal visitation law of human mobility}, \textit{Nature} 593(7860), 522--527 (2021)
+\item L.G. Natera Orozco, F. Battiston, G. I{\~n}iguez, M. Szell\\
+    \textbf{Data-driven strategies for optimal bicycle network growth}, \textit{Royal Society Open Science} 7:201130 (2020)
+\item L.G. Natera Orozco, F. Battiston, G. Iñiguez, M. Szell\\
+    \textbf{Extracting the multimodal fingerprint of urban transportation networks}, \textit{Transport Findings} 13171 (2020)
+\item F. Battiston, F. Musciotto, D. Wang, A.-L. Barab\'asi, M. Szell, R. Sinatra\\
+    \textbf{Taking census of physics}, \textit{Nature Reviews Physics} 1, 89--97 (2019)
+\item M. Szell, Y. Ma, R. Sinatra\\
+    \textbf{A Nobel opportunity for interdisciplinarity}, \textit{Nature Physics} 14, 1075--1078 (2018)
+\item M. Szell\\
+    \textbf{Crowdsourced quantification and visualization of urban mobility space inequality}, \textit{Urban Planning} 3, 1-20 (2018)
+\item S. Grauwin, M. Szell, S. Sobolevsky, P. H\"{o}vel, F. Simini, M. Vanhoof, Z. Smoreda, A.-L. Barab\'asi, C. Ratti\\
+    \textbf{Identifying the structural discontinuities of human interactions}, \textit{Scientific Reports} 7, 46677 (2017)
+\item R. Tachet , O. Sagarra , P. Santi, G. Resta , M. Szell , S. Strogatz , C. Ratti\\
+    \textbf{Scaling law of urban ride sharing}, \textit{Scientific Reports} 7, 42868 (2017)
+\item M. Nyhan, S. Sobolevsky, C. Kang, P. Robinson, A. Corti, M. Szell, D. Streets, Z. Lu, R. Britter, S.R.H. Barrett, C. Ratti\\
+    \textbf{Predicting vehicular emissions in high spatial resolution using pervasively measured transportation data and microscopic emissions model}, \textit{Atmospheric Environment} 140, 352--363 (2016)
+\item R. Sinatra, P. Deville, M. Szell, D. Wang, A.-L. Barab\'asi\\
+    \textbf{A century of physics}, \textit{Nature Physics} 11, 791--796 (2015)
+\item O. Sagarra, M. Szell, P. Santi, A. Diaz-Guilera, C. Ratti\\
+    \textbf{Supersampling and network reconstruction of urban mobility}, \textit{PLOS ONE} 10(8), e0134508 (2015)
+\item O. Mryglod, B. Fuchs, M. Szell, Y. Holovatch, S. Thurner\\
+    \textbf{Interevent time distributions of human multi-level activity in a virtual world}, \textit{Physica A} 419, 681--690 (2014)
+\item P. Santi, G. Resta, M. Szell, S. Sobolevsky, S. Strogatz, C. Ratti\\
+    \textbf{Quantifying the benefits of vehicle pooling with shareability networks},  \textit{Proceedings of the National Academy of Sciences} 110(37), 13290--13294 (2014)
+\item M. Szell, S. Grauwin, C. Ratti\\
+    \textbf{Contraction of online response to major events}, \textit{PLOS ONE} 9(2), e89052, (2014)
+\item R. Sinatra, M. Szell\\
+    \textbf{Entropy and the predictability of online life}, \textit{Entropy} 16(1), 543--556 (2014)
+\item S. Sobolevsky, M. Szell, R. Campari, T. Couronn\'e, Z. Smoreda, C. Ratti\\
+    \textbf{Delineating geographical regions with networks of human interactions in an extensive set of countries}, \textit{PLOS ONE} 8(12), e81707 (2013)
+\item S. Thurner, P. Klimek, M. Szell, G. Duftschmid, G. Endel, A. Kautzky-Willer, D. Kasper\\
+    \textbf{Quantification of excess-risk for diabetes when born in times of hunger, in an entire population of a nation, across a century}, \textit{Proceedings of the National Academy of Sciences} 110, 4703--4707 (2013)
+\item M. Szell, S. Thurner\\
+    \textbf{How women organize social networks different than men}, \textit{Scientific Reports} 3, 1214 (2013)
+\item M. Szell, R. Sinatra, G. Petri, S. Thurner, V. Latora\\
+    \textbf{Understanding mobility in a social petri dish}, \textit{Scientific Reports} 2, 457 (2012)
+\item M. Szell, S. Thurner*\\
+    \textbf{Social dynamics in a large-scale online game}, \textit{Advances in Complex Systems} 15, 1250064 (2012)
+\item S. Thurner, M. Szell, R. Sinatra\\
+    \textbf{Emergence of good conduct, scaling and Zipf laws in human behavioral sequences in an online world}, \textit{PLOS ONE} 7, e29796 (2012)
+\item M. Szell, S. Thurner\\
+    \textbf{Measuring social dynamics in a massive multiplayer online game}, \textit{Social Networks} 32, 313--329 (2010)
+\item M. Szell, R. Lambiotte, S. Thurner\\
+    \textbf{Multirelational organization of large-scale social networks in an online world}, \textit{Proceedings of the National Academy of Sciences} 107, 13636--13641 (2010)
+\end{itemize}
+
+
+\subsection*{Other academic publications}
+\begin{itemize}
+\setlength\itemsep{1em}
+\item M. Szell, Y. Ma, R. Sinatra\\
+    \textbf{Was the Nobel prize for physics? Yes -- not that it matters}, \textit{Nature} 634, 782 (2024)
+\item L. Alessandretti, M. Szell\\
+    \textbf{Urban Mobility}, in: \textit{Compendium of Urban Complexity}, (2024, accepted)
+    \item B. Resch, M. Szell\\
+    \textbf{Human-Centric Data Science for Urban Studies}, \textit{ISPRS International Journal of Geo-Information}  8, 584 (2019)
+\item Y. Holovatch, O. Mryglod, M. Szell, S. Thurner\\
+    \textbf{Analyses of a virtual world}, In: \textit{Math Meets Myth: Complexity-science approaches to folktales, myths, sagas, and histories}, Springer, Eds.: R. Kenna, M. Maccarron, P. Maccarron (2017)
+\item M. Szell, R. Sinatra\\
+    \textbf{Research funding goes to rich clubs}, \textit{Proceedings of the National Academy of Sciences} 112(48), 14749--14750 (2015)    
+\item M. Szell, P. Santi, C. Ratti\\
+\textbf{Trip sharing in the era of self-driving cars}, \textit{Autonomous Vehicles Conference}, New York University (2015)
+\item P. Santi, G. Resta, M. Szell, S. Sobolevsky, S. Strogatz, C. Ratti\\
+    \textbf{Reply to Lopez et al.: Sustainable implementation of taxi sharing requires understanding systemic effects}, \textit{Proceedings of the National Academy of Sciences} 111(51), E5489 (2014)
+\item M. Szell, B. Gro{\ss}\\
+    \textbf{Hubcab -- Exploring the Benefits of Shared Taxi Services}, in: \textit{Decoding the City}, De Gruyter, Eds.: D. Offenhuber, C. Ratti (2014)
+\item M. Szell\\
+    \textbf{Connecting Paradigms}, \textit{Science} 343(6147), 970--971 (2014)
+\item M. Szell, B. Gro{\ss}\\
+    \textbf{Hubcab -- Taxi-Fahrgemeinschaften, digital erkundet}, \textit{Stadt entschl\"usseln}, Bauwelt Fundamente 150, Birkh\"auser, Eds.: D. Offenhuber, C. Ratti (2013)
+\item S. Thurner, P. Klimek, M. Szell, G. Duftschmid, G. Endel, A. Kautzky-Willer, D. Kasper\\
+    \textbf{Reply to Klitz and Niklasson: Can viral infections explain the cross-sectional Austrian diabetes data?}, \textit{Proceedings of the National Academy of Sciences} 110, E2751 (2013)
+\item M. Szell\\
+    \textbf{Statistical physics approaches to large-scale socio-economic networks}, \textit{Dissertation}, University of Vienna (2011)
+\item S. Thurner, M. Szell (Eds.)\\
+    \textbf{Book of abstracts ECCS{'}11 Vienna}, \textit{European Conference on Complex Systems 2011}, L\"ocker (2011)
+\item M. Szell, G. Petri, K. Zhao, D. Levin\\
+    \textbf{Human mobility in an online world}, \textit{Santa Fe Summer School 2010 Project Paper} (2010)
+\item M. Szell\\
+    \textbf{Finite Differenzen Verfahren zur numerischen Lawinensimulation}, \textit{Diploma thesis}, Vienna University of Technology (2007)
+\item M. Szell, F. Judex\\
+    \textbf{Petri Net Modelling of Different Strategies in ARGESIM Comparison C4 ``Dining Philosophers'' with HPSim}, Simulation News Europe 17, 1 (2007)
+\end{itemize}
+
+\subsection*{Other non-academic publications}
+\begin{itemize}
+\setlength\itemsep{1em}
+\item A.F. Valderrama Pineda, A. Fjendbo Jensen, C. Samson, H. Lahrmann, H. Rømmer Kristensen, J. Schipperijn, M. Paulsen, M. Freudendal-Pedersen, M. Szell, M. Hvidt Breengaard\\
+\textbf{Er Danmark en cykelnation?}, \textit{Politiken} (2022)
+\item M. Szell\\
+    \textbf{Identifying urban features for vulnerable road user safety in Europe}, \textit{BMC Blog Network} (2022)
+\item O. Anker, S. Haustein, K. Hyldekær Janstrup, A. Fjendbo Jensen, M. Møller, J. Rich, M. Freudendal-Pedersen, O.B. Jensen, H. Lahrmann, A. Valderrama, M. Szell, H. Skov-Petersen, J. Troelsen, J. Schipperijn\\
+\textbf{14 forskere: Videnscenter for cyklisme skal ikke høre under Vejdirektoratet}, \textit{Altinget} (2021)
+\item M. Szell\\
+    \textbf{Bæredygtige byer kræver målrettet investering i cykelinfrastruktur}, \textit{Ingeniøren / Mobilitytech} (2021)
+\item M. Szell, J. Kickbusch\\
+    \textbf{Brug ny mobilitetslov til at skabe et mere bæredygtigt byliv}, \textit{FINANS} (2021)
+\item P. Heigren, M. Winding, M. Szell\\
+    \textbf{Cykling i byen: Små investeringer i infrastruktur binder din by sammen}, \textit{Ingeniøren / Mobilitytech} (2021)
+\end{itemize}
+
+\section*{Data visualization and software projects}
+\begin{itemize}
+\item{\textbf{superblockify}, Apr 2024, \href{https://superblockify.city}{superblockify.city}\\[2pt]
+superblockify is a Python package for partitioning an urban street network into Superblock-like neighborhoods and for visualizing and analyzing the partition results.}\\
+\item{\textbf{GrowBike.Net}, Jul 2021, \href{https://growbike.net}{growbike.net}\\[2pt]
+An interactive visualization platform growing cohesive urban bicycle networks - something that every modern city should have. Studying these synthetic networks informs us about the geometric limitations of urban bicycle network growth and can lead to better designed bicycle infrastructure in cities.}\\
+\item{\textbf{Taxonomy of Urban Bicycle Network Approaches}, Jan 2021, \href{https://github.com/mszell/taxonomybikenw}{github.com/mszell/taxonomybikenw}\\[2pt]
+The idea of this visualization is to identify the most distinct environments for cycling arriving from different approaches of urban planning.}\\
+\item{\textbf{Stephen Hawking Career}, March 2018, \href{http://michael.szell.net/hawking/}{michael.szell.net/hawking}\\[4pt]
+A Science of Science tribute to Stephen Hawking. This interactive plot allows the exploration of the influential physicist's oeuvre -- scientific papers and books -- and its impact.}\\
+\item{\textbf{What the Street!?}, June 2017, \href{https://whatthestreet.com}{whatthestreet.com}\\[2pt]
+An online platform for intuitive and playful exploration of wasted mobility space in cities, of uneven distribution of space between different modes of transportation, and how massive areas of car parking could be regained for the public.}\\
+\item{\textbf{HubCab}, Mar 2014, \href{http://www.hubcab.org/}{www.hubcab.org}\\[2pt]
+An interactive visualization that invites you to explore the ways in which over 170 million taxi trips connect the City of New York in a given year. This interface provides a unique insight into the inner workings of the city from the previously invisible perspective of the taxi system with a never before seen granularity.}\\
+\newpage
+\item{\textbf{Tweet Bursts}, Feb 2014, \href{http://senseable.mit.edu/tweetbursts}{senseable.mit.edu/tweetbursts}\\[2pt]
+Visual exploration of our collective excitement towards major events: The more excited we are, and the more intense the flurry of messages in the collective, the shorter our messages become.}\\
+\item{\textbf{Pardus}, since Jul 2004}, \href{https://pardus.at}{pardus.at}\\[2pt]
+Pardus is an award-winning graphical browser-based MMORPG set in a persistent universe where players interact and compete in space, with a worldwide user base of over 450,000 players. Pardus' player society has been studied in over 20 research papers, referenced by hundreds of studies.
+\end{itemize}
+
+\section*{Talks}
+\subsection*{Keynotes and invited talks}
+\begin{itemize}
+\item{\emph{DataBeers Copenhagen}, Copenhagen, Denmark, Sep 2023\\Stories from 1001 paths (over Dybbølsbro)}
+\item{\emph{Büro Happold}, Copenhagen, Denmark, Jul 2023\\Urban Data and Network Science for More Cycling and Walking in Cities}
+\item{\emph{Eurosolar Austria}, Vienna, Austria, Apr 2023\\Wie man optimale Radweg-Netze für Städte plant}
+\item{Complexity Science Hub Vienna, Austria, Apr 2023\\Bicycle infrastructure data and networks: Opportunities and limitations}
+\item{\emph{CASA Seminar}, London, UK (remotely), Dec 2022\\Bicycle networks: From data quality assessment to computational analysis}
+\item{ITU, Launch of Center for Climate IT, Copenhagen, Denmark, Dec 2022\\Sustainable mobility and data-driven planning}
+\item{Copenhagen Municipality, Copenhagen, Denmark, Nov 2022\\Computational desire line analysis of cyclists on the Dybbølsbro intersection}
+\item{Geographic data science lab: \emph{Brown bag seminar}, Liverpool, UK, Sep 2022\\Data-informed bicycle network planning: processes and criticisms}
+\item{Keynote talk at \emph{UA 2.0 – Towards greener and sustainable cities}, Exeter, UK, Jun 2022\\Establishing a quantitative science of bicycle networks}
+\item{\emph{ISI Foundation} workshop, Turin, Italy, May 2022\\Cycling research at NERDS}
+\item{\emph{Physics and Collective Dynamics of Future Mobility} workshop at Max Planck Institute, Dresden, Germany (remotely), Mar 2022\\Towards a human-centric urban data science}
+\item{\emph{General Assembly} of the Cycling Embassy of Denmark, Copenhagen, Denmark, Mar 2022\\Netværksanalyse af den danske cykelinfrastruktur}
+\item{Copenhagen Municipality, Copenhagen, Denmark, Dec 2021\\Finding the missing links in the Copenhagen bike network}
+\item{\emph{Supercykelstier} Frokostmøde, Copenhagen, Denmark, Dec 2021\\Netværksanalyse af den danske cykelinfrastruktur}
+\item{\emph{Urban Complex Systems} satellite of CCS 2021 conference, Lyon, France (remotely), Oct 2021\\Making cities better with human-centric urban data science}
+\item{\emph{City Interaction Lab}, Paris, France (remotely), May 2021\\Vulnerable road user safety in Europe, and towards a science of bicycle network design}
+\item{\emph{Supercykelstier}, Copenhagen, Denmark (remotely), Mar 2021\\Data-driven strategies for optimal bicycle network growth}
+\item{\emph{MIT Medial Lab}, Cambridge, USA (remotely), Sep 2020\\Human-centric Urban Data Science with OpenStreetMap}
+\item{EFC Funders Forum on Sustainable Cities, Turin, Italy, Oct 2019\\Revealing wasted urban space with crowd-sourced data}
+\item{\emph{Complex networks} workshop, Lipari, Italy, Jul 2019\\Taking census of Physics and of the Nobel Prize}
+\item{\emph{DataBeers Copenhagen}, Denmark, May 2019\\Understanding wasted mobility space with crowdsourced urban data}
+\item{Keynote talk at \emph{Parallel Cities} Science Forum at \emph{BLOXHUB}, Copenhagen, Denmark, Mar 2019\\Measuring Mobility Space Inequality}
+\item{\emph{Mathematical modelling} seminar, Budapest, Hungary, Sep 2018\\Mathematical modelling of human mobility}
+\item{\emph{Complex networks} workshop, Lipari, Italy, Jul 2018\\Quantitative analysis of urban shareability networks and mobility spaces}
+\item{\emph{Big Dive} at \emph{ISI Foundation}, Turin, Italy, Jul 2018\\Urban data science towards sustainable cities: From taxi sharing to mobility space equality}
+\item{External Faculty Meetup at \emph{Complexity Science Hub}, Vienna, Austria, May 2018\\Make cities great again: Understand urban complexity, but embrace simplicity}
+\item{\emph{Urban Mobility} OpenStreetMap Hungary Meetup, Budapest, Hungary, May 2018\\Using OpenStreetMap for Quantification and Visualization of Urban Mobility Space Inequality}
+\item{Keynote talk at \emph{Innovation \& Cooperation} event of Wiener Stadtwerke at \emph{TU Wien}, Vienna, Austria, Apr 2018\\Urban Data Culture -- Notwendigkeit und Chancen datenbasierter, interdisziplinärer Stadtentwicklung}
+\item{\emph{AI and Urban Life} satellite at \emph{NetSci-X 2018}, Hangzhou, China, Jan 2018\\Exploring New York City Taxi Trails and Sharing Our Way to a More Sustainable Urban Future}
+\item{Invited talk at \emph{Hungarian Academy of Sciences}, Budapest, Hungary, Nov 2017\\Exploring quantitatively sharing benefits and inequalities in urban transportation}
+\item{Workshop on Complex Systems at \emph{Complexity Science Hub Vienna}, Vienna, Austria, Oct 2017\\Towards a quantitative understanding of cities using network science and large-scale data analysis}
+\item{Keynote talk at \emph{COSTNET2017 Conference}, Palma de Mallorca, Spain, Oct 2017\\Unveiling untapped potential in cities: From taxi sharing to mobility space inequality}
+\item{\emph{Harvard University}, Cambridge, USA, Jul 2017\\Visual exploration of urban mobility space inequality with What the Street!?}
+\item{\emph{Northwestern University}, Evanston, USA, Jul 2017\\Quantifying sharing benefits and injustice in urban transportation}
+\item{\emph{Senseable City Lab, MIT}, Cambridge, USA, Jun 2017\\Exploring the arrogance of space with What the Street!?}
+\item{\emph{Quantifying success} satellite at \emph{NetSci 2017}, Indianapolis, USA, Jun 2017\\The success of teams and interdisciplinary research}
+\item{Talk at Center for Network Science, Central European University, Budapest, Hungary, May 2017\\ {Understanding social networks and collective behavior in online and urban environments}}
+\item{\emph{Physics of Flexible Mobility} symposium at \emph{DPG Spring Meeting}, Dresden, Germany, Mar 2017\\ {Mobility in shareability networks}}
+\item{\emph{moovel meetup} at \emph{moovel Group GmbH}, Stuttgart, Germany, Sep 2016\\ {The science of trip-sharing}}
+\item{Seminar at ``Lend\"ulet'' Research Center for Educational and Network Studies (RECENS), Budapest, Hungary, Jan 2016\\Conflict and cooperation in large social networks}
+\item{\emph{Autonomous Vehicles} Conference at New York University, New York, USA, May 2015\\Trip-sharing in the age of self-driving cars}
+\item{\emph{Understanding Complexity} Conference, Vienna, Austria, Feb 2015\\Understanding Human Society with a Social Petri Dish}
+\item{\emph{Zurich meets New York} Festival at New York Academy of Science, New York, USA, May 2014\\Using virtual worlds to explore behavior of people}
+\item{\emph{Social Network Analysis} Colloquium at ETH Z{\"u}rich, Switzerland, Feb 2014\\The Social Petri Dish and New Perspectives in Social Network Analysis}
+\item{\emph{Urban Beers} Meetup, Barcelona, Spain, Sep 2013\\Taxi pooling in New York City: a network-based approach to optimize shared mobility}
+\item{\emph{FuturICT Workshop} at MIT Medial Lab, Cambridge, Feb 2013\\{Online games as platforms for measuring socio-economic behavior}}
+\item{\emph{Macro Connections} Seminar at Harvard University, Cambridge, USA, Oct 2011\\Understanding collective socio-economic behavior in an online world}
+\item{Talk at Barabasilab, Northeastern University, Boston, USA, Oct 2011\\Structure and dynamics of multi-relational, socio-economic networks in an online world}
+\item{\emph{Games Technology Workshop} at ETH Z{\"u}rich, Switzerland, Mar 2011\\{Browser-based MMOGs: Technology and use as research tools}}
+\item{Interdisciplinary Seminar \emph{Modeling Complex Socio-Economic Systems and Crises} at ETH Z{\"u}rich, Switzerland, Feb 2011\\ {Social Networks in Multiplayer Online Games}}
+\item{Invited talk at ETH Z{\"u}rich, Switzerland, Feb 2011\\ {Massive Multiplayer Online Games as Socio-economic Labs}}
+\item{\emph{IIASA Xevents Workshop}, Laxenburg, Austria, Mar 2010\\ {Extreme events in a large-scale, virtual human society}}
+\item{Invited talk at University of Catania, Italy, Oct 2009\\ {Measuring the evolution of socio-economical structure in an online game}}
+\item{Invited lecture at the Department of Education and Human Development, University of Vienna, Austria, Jun 2008\\ {Pardus -- Funktion und Aufbau eines Browser-Spiels}}
+\item{\emph{ARGESIM Simulation Workshop}, Siena, Italy, Sep 2007\\ {Finite Differenzen Verfahren zur numerischen Lawinensimulation}\\ {Pardus -- Funktion und Aufbau eines Browser-Spiels}}
+\item{\emph{Workshop for avalanche dynamics} at the Austrian service for Torrent and Avalanche Control, Schwaz, Austria, Oct 2007\\ {Finite Differenzen Verfahren zur numerischen Lawinensimulation}}
+\end{itemize}
+
+\subsection*{Contributed talks}
+\begin{itemize}
+\item{\emph{IC2S2 2023} Conference, Copenhagen, Denmark, Jul 2023\\Computational Desire Line Analysis of Cyclists on the Dybbølsbro Intersection in Copenhagen}
+\item{\emph{CSH-ITU workshop Sustainable Mobility: Data, Networks, and Complexity}, Vienna, Austria, Apr 2023\\The Science of Growing Urban Bicycle Networks}
+\item{\emph{UrbanSys2021} satellite at \emph{CCS 2021}, Lyon, France, Oct 2021\\Growing cohesive urban bicycle networks}
+\item{5th Annual Meeting of the Cycling Research Board, \emph{CRBAM21}, Copenhagen, Denmark, Oct 2021\\The geometric limits of growing urban bicycle networks}
+\item{1st Annual Meeting of the Cycling Research Board, Amsterdam, Netherlands, Nov 2018\\Cross-city visualization \& quantification of the ``arrogance of space'' using large-scale transport space data}
+\item{\emph{NetSci 2018} Conference, Paris, France, Jun 2018\\Structural discontinuities of human interactions in space}
+\item{\emph{Urban Systems and Network Science} satellite at \emph{NetSci 2017}, Indianapolis, USA, Jun 2017\\Interactive, animated exploration of urban mobility spaces through the online platform ``What the Street!?''}
+\item{\emph{CompleNet 2017} Conference, Dubrovnik, Croatia, Mar 2017\\Shareability networks: Quantifying ride-sharing benefits}
+\item{\emph{IC2S2 2016} Conference, Evanston, USA, Jun 2016\\Exploring the anatomy of physics}
+\item{\emph{CompleNet 2016} Conference, Dijon, France, Mar 2016\\Quantifying social effects in collaborative work}
+\item{\emph{ICCSS 2015} Conference, Helsinki, Finland, Jun 2015\\Understanding effort and success in teams}
+\item{\emph{NetSci 2015} Conference, Zaragoza, Spain, Jun 2015\\Quantifying team effort and success}
+\item{\emph{CompleNet 2015} Conference, New York City, USA, Mar 2015\\Understanding Team Success}
+\item{\emph{NetSci 2014} Conference, Berkeley, USA, Jun 2014\\Higher-order models in human mobility and interactions}
+\item{\emph{Network Frontier Workshop 2013} at Northwestern University, Evanston, USA, Dec 2013\\Taxi-pooling in New York City: A network-based approach to social sharing}
+\item{\emph{Engaging Data 2013} Conference at MIT, Cambridge, USA, Nov 2013\\Hubcab -- Taxi-sharing in New York City: A network-based approach}
+\item{\emph{ECCS 2013} Conference, Barcelona, Spain, Sep 2013\\Human spatial organization and the emergence of urban centers}
+\item{\emph{ECCS 2013} Conference, Multiplex Networks 2013, Barcelona, Spain, Sep 2013\\Multiplex networks in social systems}
+\item{\emph{Urban Code} Conference, Cambride, USA, Nov 2012\\hubcab -- A network-based improved urban taxi service}
+\item{Ph.D. Defensio at University of Vienna, Austria, Mar 2012\\Statistical physics approaches to large-scale socio-economic networks}
+\item{\emph{ECCS 2011} Conference, Vienna, Austria, Sep 2011\\Human mobility on a network}
+\item{\emph{NetSci 2011} Conference, Budapest, Hungary, Jun 2011\\Multi-relational Socio-economic Networks in a Large-scale Online Community}
+\item{\emph{Net2011} Conference at University Bicocca Milano, Italy, May 2011\\{Multi-relational socio-economic networks in a massive multiplayer online game}}
+\item{\emph{INSITE Kickoff-Meeting}, Venice, Italy, Apr 2011\\{The artificial world of the Pardus game: First lessons}}
+\item{\emph{7th Vienna Central European Seminar in Particle Physics and Quantum Field Theory}, Austria, Nov 2010\\ {Complex human mobility dynamics on a network}}
+\item{\emph{ECCS 2010} Conference, Lisbon, Portugal, Sep 2010\\ {Multi-relational social dynamics in a large-scale online game society}\\ {Trade, Conflict and Sentiments: Multi-relational organization of large-scale social networks}}
+\item{COST workshop \emph{Processes on Networks} at Medical University of Vienna, Austria, Mar 2010\\ {Establishment of a large-scale ``laboratory'' for socio-economic behavior}}
+\item{Workshop \emph{Modelling Science} at Rathenau Institute, Amsterdam, Netherlands, Oct 2009\\ {Measuring the evolution of socio-economical structure in an online game}}
+\item{\emph{DPG Spring Meeting}, Dresden, Germany, Mar 2009\\ {Measuring the evolution of socio-economical structure in an online game}}
+\end{itemize}
+
+
+\section*{Academic activities}
+\subsection*{Memberships and foundations}
+\begin{itemize}
+\item{Associate member of the \emph{OpenStreetMap Foundation}, since Oct 2024}
+\item{Member of the ITU \emph{Center for Climate IT}, since Dec 2022}
+\item{Creator and administrator of the \emph{datasci.social} Mastodon community, \href{https://datasci.social/}{datasci.social}, since Nov 2022}
+\item{Coordinator of \emph{NEtwoRks, Data, and Society (NERDS)} research group at IT University of Copenhagen, \href{https://nerds.itu.dk}{nerds.itu.dk}, Denmark, Oct 2022 -- May 2024}
+\item{ITU representative of \emph{Det Nationale Videnscenter for Cykelfremme (Danish Centre for Cycling Knowledge)}, since Mar 2022}
+\item{Co-founder and member of \emph{NEtwoRks, Data, and Society (NERDS)} research group at IT University of Copenhagen, \href{https://nerds.itu.dk}{nerds.itu.dk}, Denmark, since Apr 2019}
+\end{itemize}
+
+\subsection*{Editorial service}
+\begin{itemize}
+\item Review editor at Frontiers (Social Physics)\\since Jun 2018
+\item Editor at Complex Systems\\since Jan 2018
+\item Editor at International Journal of Geo-information\\Aug 2019 -- Oct 2023
+\item Editor at PLOS ONE\\Dec 2017 -- Sep 2022
+\item Handling editor at PLOS ONE collection \emph{Science of Stories}\\Jan 2019 -- Jun 2019
+\item Guest Editor at International Journal of Geo-Information, \emph{Human-Centric Data Science for Urban Studies}\\Dec 2017 -- Apr 2019
+\item Guest Editor at EPJ Data Science, \emph{Individual and Collective Human Mobility: Description, Modelling, Prediction}\\May 2017 -- Jan 2018
+\end{itemize}
+
+\subsection*{Review service}
+\begin{itemize}
+\item{\emph{Journals:} Nature, Nature Communications, Nature Sustainability, Nature Human Behaviour, PNAS, Science Advances, Nature Computational Science, Physical Review Letters, Physical Review E, New Journal of Physics, Europhysics Letters, Social Networks, Journal of The Royal Society Interface, Royal Society Open Science, Scientific Data, PLOS ONE, Journal of Statistical Mechanics, EPJ Data Science, Condensed Matter Physics, Frontiers, Transportation, Environment and Planning B, Games, ACM Transactions on Knowledge Discovery from Data, IEEE Transactions on Network Science and Engineering, IEEE Transactions on Knowledge and Data Engineering, IEEE Transactions on Signal and Information Processing over Networks, IEEE Transactions on Intelligent Transportation Systems, GeoInformatica, International Journal of Sustainable Transportation, International Journal of Geographical Information Science, Sustainability, Economics Bulletin}
+\item{\emph{Publishers:} Cambridge University Press, Chapman \& Hall/CRC}
+\item{\emph{Funding agencies and institutions:} German Research Foundation (DFG), Netherlands Organisation for Scientific Research (NWO), Forum neue Medien Austria, World Bank}
+\end{itemize}
+
+\subsection*{Academic visits}
+\begin{itemize}
+\item{Complexity Science Hub Vienna, Austria, Apr 2023}
+\item{ISI Foundation, Turin, Italy, May -- Jun 2022}
+\item{ISI Foundation, Turin, Italy, Oct 2021}
+\item{ISI Foundation, Turin, Italy, Jun 2019}
+\item{ISI Foundation, Turin, Italy, Jun -- Jul 2018}
+\item{Northwestern Institute on Complex Systems (NICO), Northwestern University, Evanston, USA, Jul 2017}
+\item{Center for Complex Network Research, Northeastern University, Boston, USA, Jun -- Jul 2017}
+\item{Center for Network Science, Central European University, Budapest, Hungary, Mar -- Apr 2016}
+\item{Santa Fe Institute, Santa Fe, USA, Oct 2011}
+\item{Laboratory for Complex Systems, University of Catania, Italy, May -- Jun 2011}
+\item{Chair of Sociology, in particular of Modeling and Simulation, ETH Z{\"u}rich, Switzerland, Feb -- Mar 2011}
+\item{Laboratory for Complex Systems, University of Catania, Italy, Sep 2010}
+\item{COST scientific mission at the Institute of Mathematical Sciences, Imperial College London, UK, Aug -- Sep 2010}
+\end{itemize}
+
+\subsection*{Advanced training}
+\begin{itemize}
+\item{\emph{Graph Exploitation Symposium} at MIT Endicott House, USA, Aug 2014}
+\item{\emph{Workshop on Information and Decision in Social Networks} at MIT Media Lab, USA, Nov 2012}
+\item{\emph{Workshop Computational Social Science} at Harvard University, USA, May 2012}
+\item{\emph{SFI Complex Systems Summer School 2010} at the Santa Fe Institute, USA, Jun 2010}
+\item{Summer school \emph{Complex Systems and Social Simulation} at the Central European University, Budapest, Hungary, Jul 2009}
+\item{Summer school \emph{Steps in Evolution} at the Jacobs University Bremen, Germany, Jun 2009}
+\end{itemize}
+
+\subsection*{Organization and committees}
+\begin{itemize}
+\item{Program Committee member of \emph{CompleNet 2025} in Fortaleza, Brazil, Apr 2025}
+\item{Program Committee member of \emph{IC2S2} in Philadelphia, USA, Jul 2024}
+\item{Program Committee member of \emph{NetSci 2024} in Québec City, Canada, Jun 2024}
+\item{Program Committee member of \emph{CompleNet 2024} in Exeter, UK, Apr 2024}
+\item{Program Committee member of \emph{NetSciX} in Venice Italy, Jan 2024}
+\item{Program Committee member of \emph{Complex Networks 2023} in Nice, France, Nov 2023}
+\item{Program Committee member of \emph{Equitable Accessibility and Sustainable Mobility Workshop 2023 at GIScience 2023} in Leeds, UK, Sep 2023}
+\item{Program Committee member of \emph{IC2S2} in Copenhagen, Denmark, Jul 2023}
+\item{Program Committee member of \emph{CompleNet 2023} in Aveiro, Portugal, Apr 2023}
+\item{Main organizer of \emph{CSH-ITU workshop Sustainable Mobility: Data, Networks, and Complexity} in Vienna, Austria, Apr 2023}
+\item{Program Committee member of \emph{NetSciX 2023} in Buenos Aires, Brazil, Feb 2023}
+\item{Program Committee member of \emph{CityVis 2022} in Potsdam, Germany, Nov 2022}
+\item{Program Committee member of the CCS 2022 satellite \emph{ComplexDataBlocks} in Palma di Mallorca, Spain, Oct 2022}
+\item{Co-chair dataset track of \emph{ICWSM-22} in Atlanta, USA, Jun 2022}
+\item{Program Committee member of \emph{Complex Networks 2021} in Madrid, Spain, Nov 2021}
+\item{Program Committee member of \emph{MIMODE 2021} in Lyon, France, Oct 2021}
+\item{Program Committee member of \emph{CCS 2021} in Lyon, France, Oct 2021}
+\item{Program Committee member of \emph{IC2S2 2021} in Zurich, Switzerland, Jul 2021}
+\item{Program Committee member of \emph{CompleNet 2021} online, May 2021}
+\item{Program Committee member of \emph{SocInfo20} in Pisa, Italy, Oct 2020}
+\item{Program Committee member of \emph{ICCS 2020} in Nashua, USA, Jul 2020}
+\item{Reviewer of Conference Papers of \emph{IC2S2 2020} in Cambridge, USA, Jul 2020}
+\item{Program Committee member of \emph{NetSci 2020} in Rome, Italy, Jul 2020}
+\item{Program Committee member of \emph{CompleNet 2020} in Exeter, UK, Mar 2020}
+\item{Program Committee member of \emph{NetSci-X 2020} in Tokyo, Japan, Jan 2020}
+\item{Program Committee member of \emph{Future Cities Challenge 2019} in Oxford, UK, Jul 2019}
+\item{Program Committee member of \emph{CompleNet 2019} in Tarragona, Spain, Mar 2019}
+\item{Program Committee member of \emph{Complex Networks 2018} in Cambridge, UK, Dec 2018}
+\item{Program Committee member of \emph{CCS 2018} in Thessaloniki, Greece, Sep 2018}
+\item{Program Committee member of \emph{ICCS 2018} in Cambridge, USA, Jul 2018}
+\item{Program Committee member of \emph{CompleNet 2018} in Boston, USA, Mar 2018}
+\item{Program Committee member of \emph{Complex Networks 2017} in Lyon, France, Nov 2017}
+\item{Program Committee member of \emph{CCS 2017} in Cancun, Mexico, Sep 2017}
+\item{Program Committee member of \emph{ENIC'17} in Duisburg, Germany, Jul 2017}
+\item{Program Committee member of \emph{IC2S2 2017} in Cologne, Germany, Jul 2017}
+\item{Program Committee member of the ICWSM-17 \emph{11th International Conference on Web and Social Media} in Montreal, Canada, May 2017} 
+\item{Program Committee member of \emph{COMPLEXIS 2017} in Porto, Portugal, Apr 2017} 
+\item{Program Committee member of the Social Networks and Graph Analysis Track of the WWW2017 \emph{26th International World Wide Web Conference} in Perth, Australia, Apr 2017} 
+\item{Program Committee member of \emph{CompleNet 2017} in Dubrovnik, Croatia, Mar 2017}
+\item{Program Committee member of \emph{Complex Networks 2016} in Milan, Italy, Dec 2016}
+\item{Program Committee member of the CCS 2016 \emph{Open Science for an Open Society} satellite in Amsterdam, Netherlands, Sep 2016} 
+\item{Program Committee member of the ICWSM-16 \emph{10th International Conference on Web and Social Media} in Cologne, Germany, May 2016} 
+\item{Program Committee member of the ICDM2016 \emph{Workshop on Data mining for the Analysis of Performance and Success (DAPS 2016)} in Cologne, Germany, May 2016} 
+\item{Program Committee member of the ICWSM-16 \emph{10th International Conference on Web and Social Media} in Cologne, Germany, May 2016} 
+\item{Program Committee member of \emph{COMPLEXIS 2016} in Rome, Italy, Apr 2016} 
+\item{Program Committee member of the Social Networks and Graph Analysis Track of the WWW2016 \emph{25th International World Wide Web Conference} in Montreal, Canada, Apr 2016} 
+\item{Program Committee member of the CompleNet 2016 \emph{Workshop on Complex Networks} in Dijon, France, Mar 2016}
+\item{Program Committee member of the NetSciX 2016 \emph{Conference on Network Science} in Wroclaw, Poland, Jan 2016}
+\item{Program Committee member of the ASONAM 2015 \emph{DyNo Workshop on Dynamics in Networks} in Paris, France, Aug 2015}
+\item{Program Committee member of the ASONAM 2015 \emph{Industry-Track} in Paris, France, Aug 2015}
+\item{Program Committee member of the \emph{IEEE BigData Congress 2015} in New York City, USA, Jun 2015}
+\item{Main organizer and Program Committee member of the NetSci 2015 Satellite \emph{NetSci Backstage}  in Zaragoza, Spain, Jun 2015}
+\item{Program Committee member of the ICWSM-15 \emph{9th International Conference on Web and Social Media} in Oxford, UK, May 2015} 
+\item{Program Committee member of the CompleNet 2015 \emph{Workshop on Complex Networks} in New York City, USA, Mar 2015}
+\item{Program Committee member of the NetSciX 2015 \emph{Conference on Network Science} in Rio de Janeiro, Brasil, Jan 2015}
+\item{Program Committee member of the SocInfo 2014 track EGG 2014 \emph{Exploration on Game and Gamers Workshop} in Barcelona, Spain, Nov 2014}
+\item{Program Committee member of the SDM 2014 \emph{Workshop on Mining Networks and Graphs: A Big Data Analytic Challenge} in Philadelphia, USA, Apr 2014}
+\item{Organizer at the conference \emph{Engaging Data 2013} at MIT, Cambridge, USA, Nov 2013}
+\item{Program Committee member of the SDM'14 workshop \emph{Mining Networks and Graphs: A Big Data Analytics Challenge} Philadelphia, USA, Apr 2014}
+\item{Program Committee member of the 3PGCIC 2013 \emph{Social Network Applications} track at University of Technology of Compiegne, France, Oct 2013}
+\item{Program Committee member of the ECCS 2013 \emph{Multiplex Networks 2013} satellite in Barcelona, Spain, Sep 2013}
+\item{Program Committee member of the BRICS-CCI \& CBIC 2013 \emph{Complex Systems Symposium} in Recife, Brazil, Sep 2013}
+\item{Reviewer of Conference Papers of the CUPUM 2013 \emph{13th International Conference on Computers in Urban Planning and Urban Management} in Utrecht, Netherlands, Jul 2013}
+\item{Organizer at the conference \emph{Urban Code} at MIT, Cambridge, USA, Nov 2012}
+\item{Program Committee member of the \emph{Symposium on Social Networks and Social Contagion} at the Westin Arlington Gateway, USA, Nov 2012}
+\item{Main organizer and Program Committee member of the ECCS'11 Satellite \emph{XNet -- Complexity \& Networks} at the Medical University of Vienna, Austria, Jan -- Sep 2011}
+\item{Main organizer and Program Committee member of the \emph{European Conference on Complex Systems 2011 (ECCS'11)} at the Medical University of Vienna, Austria, Oct 2010 -- Sep 2011}
+\item{Main organizer of COST MP0801 workshop \emph{Processes on Networks} at the Medical University of Vienna, Austria, Mar 2010}
+\end{itemize}
+
+\section*{Teaching, supervision, and censor work}
+
+\subsection*{Courses}
+\begin{itemize} 
+\item{\emph{Geospatial Data Science} (7.5 ECTS credits, 100\%), IT University of Copenhagen, Spring 2024}
+\item{\emph{Introduction to Data Science and Programming} (15 ECTS credits, 70\%), IT University of Copenhagen, Fall 2023}
+\item{\emph{Geospatial Data Science} (7.5 ECTS credits, 75\%), IT University of Copenhagen, Spring 2022}
+\item{\emph{First Year Project} (15 ECTS credits, 30\%), IT University of Copenhagen, Spring 2021}
+\item{\emph{Introduction to Data Science and Programming} (15 ECTS credits, 65\%), IT University of Copenhagen, Fall 2020, 2021, 2022}
+\item{\emph{Introduction to Data Science and Programming} (15 ECTS credits, 50\%), IT University of Copenhagen, Fall 2019}
+\item{\emph{Technical Communication} (7.5 ECTS credits), IT University of Copenhagen, Fall 2019}
+\item{\emph{Data and Network Visualization} (4 ECTS credits), Central European University, Fall 2018}
+\item{\emph{Urban Networks and Human Mobility} (4 ECTS credits), Central European University, Fall 2018}
+\item{\emph{Statistical Methods in Network Science and Data Analysis} (8 ECTS credits), Central European University, Winter 2017/2018}
+\item{Seminar chair at seminar \emph{Understanding Big Data}, European Forum Alpbach 2016, Aug 2016}
+\end{itemize}
+
+\subsection*{Single classes}
+\begin{itemize} 
+\item{Class at \emph{IT and Green Transitions}, ITU Copenhagen, Denmark, Oct 2023}
+\item{Class at \emph{IT and Green Transitions}, ITU Copenhagen, Denmark, Sep 2022}
+\item{Guest class at \emph{Reflections on Data Science}, ITU Copenhagen, Denmark, Apr 2020}
+\item{Guest class at \emph{SG2 Analytisches Gestaltungsprojekt}, HfG Schwäbisch Gmünd, Germany (online), Apr 2019}
+\item{Guest class at \emph{Data and Network Visualization}, Central European University, Budapest, Hungary, Nov 2017}
+\item{Guest class at \emph{JustData - University Wide Course}, Central European University, Budapest, Hungary, Nov 2017}
+\end{itemize}
+
+\subsection*{Supervision}
+\begin{itemize}
+\item{Co-supervisor of BA student Gareth Edward Thomas at ITU Copenhagen, 2024}
+\item{Co-supervisor of MSc student Frederik Peter Høngaard at ITU Copenhagen, 2023-2024}
+\item{Co-supervisor of MSc students Julius Thomas Markus Roder and Sebastian Rohr Watt at ITU Copenhagen, 2023-2024}
+\item{Supervisor of PhD student Clément Sebastiao at ITU Copenhagen, since 2024}
+\item{Supervisor of MSc student Emil Bak-Møller at ITU Copenhagen, 2023}
+\item{Supervisor of MSc student Christian Hedegaard Pliess Larsen at ITU Copenhagen, 2023}
+\item{Supervisor of MSc students Anita Justyna Zielińska and Edi Begovic at ITU Copenhagen, 2023}
+\item{Supervisor of MSc students Jan Leonard Schelhaas and Peter Gregory Mehler at ITU Copenhagen, 2023}
+\item{Co-supervisor of MSc student Carlson Moses Büth at ITU Copenhagen, 2022-2023}
+\item{Co-supervisor of MSc student Henrik Wolf at ITU Copenhagen, since 2022-2023}
+\item{Supervisor of PhD student Ane Rahbek Vierø at ITU Copenhagen, since 2022}
+\item{Supervisor of PhD student Anastassia Vybornova at ITU Copenhagen, since 2021}
+\item{Supervisor of Postdoc Bojan Kostic at ITU Copenhagen, 2021-2022}
+\item{Co-supervisor of Postdoc Tiago Cunha at ITU Copenhagen, 2020-2023}
+\item{Co-supervisor of MSc student Anastassia Vybornova at ITU Copenhagen, 2021}
+\item{Supervisor of MSc students Cecilia Laura Kolding Andersen and Morten Lynghede at ITU Copenhagen, 2021}
+\item{Supervisor of BA students Edi Begovic and Høgni Ziska Maree Jacobsen at ITU Copenhagen, 2021}
+\item{Supervisor of Lagrange scholar (Post-MSc level) Marina Klanj\v{c}i{\'c} at ISI Foundation, 2019-2021}
+\item{Supervisor of PhD student Luis Guillermo Natera Orozco at CEU, 2018-2021}
+\item{Supervisor of MSc student Albert-Hose Llebaria Holda at ITU Copenhagen, 2020}
+\item{Supervisor of BA student Martin Bedsted Villandsen at ITU Copenhagen, 2020}
+\item{Co-supervisor of PhD students, master students, interns, at Medical University Vienna and MIT}
+\end{itemize}
+
+\subsection*{Censor work}
+\begin{itemize} 
+\item{Examiner for the computer science study programs in Denmark, since April 2022}
+\item{Examiner for the linguistic and cognitive study programs in Denmark, since June 2021}
+\item{PhD defense examiner for Mateo Neira at University College London, UK, Mar 2024}
+\item{PhD defense reviewer at University of Calabria, Italy, Jan 2024}
+\item{PhD defense examiner for Frank Schlosser at Humboldt University, Berlin, Germany, Apr 2023}
+\item{PhD defense examiner for Giulia Reggiani at TU Delft, Netherlands, May 2022}
+\item{PhD defense examiner for Kristoffer Lind Glavind at University of Copenhagen, Denmark, Oct 2021}
+\item{PhD defense reviewer at Scuola Normale Superiore di Pisa, Italy, Jul 2020}
+\item{PhD defense reviewer at Universitat de les Illes Balears, Palma, Spain, Jul 2019}
+\item{PhD defense reviewer at Aalto University, Helsinki, Finland, Aug 2018}
+\item{PhD defense examiner for Ádám Szántó-Várnagy at E{\"o}tv{\"o}s Lor{\'a}nd University, Budapest, Hungary, Mar 2017}
+\end{itemize}
+
+\section*{External research funding}
+\begin{itemize} 
+\item{PI (Consortium Partner) in EU Horizon project \emph{JUST STREETS -- Mobility justice for all: framing safer, healthier and happier streets}, Jan 2024 -- Jun 2027}
+\item{PI in Danish Ministry of Transport ``Cykelpuljen'' grant \textit{Netværksanalyse af den danske cykelinfrastruktur}, with PhD student Ane Rahbek Vierø, Jan 2022 -- Dec 2024}
+\item{Co-leader in a sub-award of the Templeton grant \textit{Using Big Data to Quantify and Cultivate Genius}, with Albert-L\'aszl\'o Barab\'asi, Roberta Sinatra, Cesar Hidalgo, Sep 2018 -- Aug 2021\\
+The sub-award was won but declined.}
+\item{Premium postdoctoral researcher in the Hungarian Academy of Sciences (MTA) grant \textit{Conflict and Controversy in Large Social Networks}, Sep 2016 -- Sep 2019}\\
+Due to assuming an Assistant Professor position at CEU, I discontinued this grant in Oct 2017.
+\item{Key research personnel in the Air Force Office of Scientific Research (AFOSR) grant \textit{The Fundamentals of Predictability of Scientific Success}, with Albert-L\'aszl\'o Barab\'asi, Alessandro Vespignani, Roberta Sinatra, Feb 2015}
+\item{Key research personnel in the Austrian Science Fund (FWF) project P23378, \textit{Quantifying socio-economic multiplex networks in a massive multiplayer online game}, with Stefan Thurner, Sep 2011 -- Oct 2015\\
+Although this grant was funded, I did not assume the position due to my move to Boston (MIT) in 2012.} 
+\end{itemize}
+
+\section*{Travel and other grants}
+\begin{itemize} 
+\item{CEU ACRO Teaching development grant, Dec 2017}
+\item{Industry support for organizing NetSci 2015 satellite NetSci Backstage, Jun 2015}
+\item{Travel and accommodation support to one-month academic visit by ETH Zurich, Feb 2011}
+\item{Travel grant from \"Osterreichische Forschungsgemeinschaft to ECCS 2010, Sep 2010}
+\item{Travel grant from the European Cooperation in Science and Technology, Action MP0801 Physics of Competition and Conflicts, to two-month academic visit to Imperial College, Aug-Sep 2010}
+\item{Full travel and accommodation grant from Santa Fe Institute for three-week SFI Complex Systems Summer School 2010, Jun 2010}
+\end{itemize}
+
+
+
+\section*{In the media}
+My research and projects have been featured in, among others:
+\begin{itemize}
+\item{The New York Times, Le Monde, Scientific American, MIT Technology Review, MIT Frontpage Spotlight, MIT News, Nature News, Science News, National Geographic, Frankfurter Allgemeine Zeitung, The Guardian, Fast Company, The Huffington Post, Der Spiegel, Forbes, Newsweek, NBC News, The Atlantic, Citylab, Bild der Wissenschaft, Fortune, Ingeniøren / Mobilitytech, Yahoo! Finance, New York Magazine, Salon, Physorg, IEEE Spectrum, Quattroruote, Il sole 24 ore, La Stampa, Science Daily, Neue Z\"urcher Zeitung, 20 Minuten, Público, Austrian National Radio \"O1, Austrian National Radio FM4, ORF Science, Der Standard, Die Presse, Wiener Zeitung, Salzburger Nachrichten, O{\"O} Nachrichten, Kleine Zeitung}
+\end{itemize}
+
+
+\section*{Policy impact}
+My research has been cited by:
+\begin{itemize}
+\item{OECD/ITF, Towards the Light: Effective Light Mobility Policies in Cities, 2023}
+\item{European Commission, New perspectives on territorial disparities, 2022}
+\item{WHO, Walking and cycling: latest evidence to support policy-making and practice, 2022}
+\item{World Bank, Mobility and Resilience: A Global Assessment of Flood Impacts on Road Transportation Networks, 2022}
+\item{World Bank, Adapting Mobility-as-a-Service for Developing Cities: A Context-Sensitive Approach, 2021}
+\item{OECD/ITF, Ready for Take-off? Integrating Drones into the Transport System, 2021}
+\item{World Bank, Big Data in Transportation: An Economics Perspective, 2020}
+\end{itemize}
+
+\section*{Awards and exhibitions}
+\begin{itemize} 
+\item{City Vis 2022 shortlisted in Research for \emph{GrowBike.Net}, Nov 2022}
+\item{Research Environment of the Year 2022 for NERDS, Copenhagen, June 2022}
+\item{Permanent exhibition of \emph{What the Street!?} in Futurium in Berlin, Germany, from Sep 2019}
+\item{City Vis 2018 award in Art \& Advocacy for \emph{What the Street!?}, and exhibition in Berlin, Germany, Oct 2018}
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{small}
+    Last updated: \today
+  \end{small}
+\end{center}
+
+\end{document}
